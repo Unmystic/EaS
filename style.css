@@ -1,0 +1,7 @@
+body{
+display: flex}
+
+.element{
+    height: 16px;
+    width: 16px;
+}
