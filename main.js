@@ -39,10 +39,10 @@ btnSubmit.addEventListener("click", createGrid);
 function createGrid() {
   console.log(inputField.value);
   container.replaceChildren();
-    for (let index = 0; index < inputField.value; index++) {
-        createRow(inputField.value);
-    }
-  
+  for (let index = 0; index < inputField.value; index++) {
+    createRow(inputField.value);
+  }
+  addColors();
   inputField.value = 20;
 }
 
@@ -56,4 +56,20 @@ function createRow(value) {
     element.classList.add("col-xs");
     row.appendChild(element);
   }
+}
+function addColors() {
+  container.addEventListener(
+    "mouseover",
+    (event) => {
+      // highlight the mouseover target
+      event.target.style.backgroundColor = "orange";
+      console.log(event.target);
+
+      // reset the color after a short delay
+      setTimeout(() => {
+        event.target.style.backgroundColor = "";
+      }, 500);
+    },
+    false,
+  );
 }
