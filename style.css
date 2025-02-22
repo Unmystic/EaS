@@ -1,7 +1,43 @@
-body{
-display: flex}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.element{
-    height: 16px;
-    width: 16px;
+.element {
+  border: 1px solid #000;
+  border-radius: 2px;
+  height: 16px;
+  width: 16px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  border: 1px solid #000;
+}
+.textLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+.submit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.col-xs {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
